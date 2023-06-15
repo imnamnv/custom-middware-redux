@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   studentList: [],
+  loading: false,
 };
 
 export const studentSlice = createSlice({
@@ -11,9 +12,12 @@ export const studentSlice = createSlice({
     fetchStudentList: (state, action) => {
       state.studentList = action.payload;
     },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
   },
 });
 
-export const { fetchStudentList } = studentSlice.actions;
+export const { fetchStudentList, setLoading } = studentSlice.actions;
 
 export default studentSlice.reducer;
