@@ -1,4 +1,4 @@
 # custom-middware-redux
-pnpm install
+yarn
 
-pnpm dev
+yarn dev
